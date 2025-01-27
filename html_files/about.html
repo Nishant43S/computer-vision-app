@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Project</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- link for poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Internal CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* cursor: pointer; */
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: rgb(14, 17, 23);
+            color: rgb(250, 250, 250);
+            line-height: 1.6;
+        }
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* ------ Header Section -------*/
+        header {
+            /* text-align: center; */
+            margin-bottom: 30px;
+        }
+        .hover {
+            text-shadow: 0 0 20px rgba(98, 162, 250, 0.4);
+        }
+        header h1 {
+            font-size: 3em;
+            color: rgb(98, 162, 250);
+            cursor: pointer;
+        }
+        header h2 {
+            font-size: 2.5em;
+            color: white;
+            cursor: pointer;
+        }
+        header h2:hover {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        }
+        /* ------ About Section ------ */
+        .about {
+            position: relative;
+            background-color: rgb(24, 28, 38);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            /* width: 500px; */
+        }
+        .about:hover {
+            transform: scale(1.02);
+            border: 2px solid rgb(98, 162, 250);
+        }
+        .about h3 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: rgb(98, 162, 250);
+        }
+        .about p,
+        .about ul {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        .about ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+        /* ------ Technologies Section ------ */
+        .technologies {
+            margin-top: 30px;
+        }
+        .technologies h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: rgb(98, 162, 250);
+            cursor: pointer;
+        }
+        .technologies h2:hover {
+            /* text-decoration: underline; */
+            text-shadow: 0 0 20px rgba(98, 162, 250, 0.4);
+        }
+        .row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .tech-card {
+            align-items: center;
+            /* width: 30%;
+            height: 300px; */
+            width: 43%;
+            height: 255px;
+            /* background-color: rgb(46, 84, 182); */
+            background-color: rgb(24, 28, 38);
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .tech-card h4 {
+            color: rgb(98, 162, 250);
+            font-size: 1.3rem;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .tech-card:hover {
+            transform: scale(1.02);
+        }
+        .tech-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(24, 28, 38, 0.4);
+            /* blur color */
+            filter: blur(20px);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .tech-card:hover::before {
+            opacity: 1;
+        }
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 20px rgba(24, 28, 38, 0.4), 0 0 40px rgba(24, 28, 38, 0.3), 0 0 60px rgba(24, 28, 38, 0.2);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(24, 28, 38, 0.4), 0 0 40px rgba(24, 28, 38, 0.3), 0 0 60px rgba(24, 28, 38, 0.2);
+            }
+        }
+        .tech-card:hover {
+            animation: glow 1.5s infinite ease-in-out;
+        }
+        /* ------ Developers Section ------ */
+        .developers {
+            margin-top: 30px;
+        }
+        .developers h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: rgb(98, 162, 250);
+            cursor: pointer;
+        }
+        .developers h2:hover {
+            text-shadow: 0 0 20px rgba(98, 162, 250, 0.4);
+        }
+        .developer-card {
+            display: flex;
+            align-items: center;
+            background-color: rgb(24, 28, 38);
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            margin-bottom: 20px;
+        }
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid rgb(98, 162, 250);
+        }
+        .details {
+            margin-left: 20px;
+            display: flex;
+            width: 80%;
+            margin: auto;
+            justify-content: space-between;
+        }
+        .details p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .developer {
+            display: inline-block;
+            width: 200px;
+        }
+        .developer-name {
+            cursor: pointer;
+            width: 200px;
+        }
+        .developer-name:hover {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        }
+        .social-icons {
+            display: flex;
+
+        }
+        .social-icons a {
+            text-decoration: none;
+            margin: 0px 15px;
+        }
+        .fa-brands.fa-linkedin.fa-2xl {
+            color: gray
+        }
+        .fa-brands.fa-linkedin.fa-2xl:hover {
+            color: rgb(98, 162, 250);
+            text-shadow: 0 0 20px rgba(98, 162, 250, 0.9);
+        }
+        .fa-brands.fa-github.fa-2xl {
+            color: gray;
+        }
+        .fa-brands.fa-github.fa-2xl:hover {
+            /* color: rgb(98, 162, 250); */
+            color: rgb(255, 255, 255);
+            text-shadow: 0 0 20px rgba(98, 162, 250, 0.9);
+        }
+        /* ----------- Media Query Section ------------ */
+        @media screen and (max-width: 768px) {
+            .main-container {
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+            .row {
+                display: block;
+            }
+            .tech-card {
+                margin: auto;
+                width: 100%;
+                bottom: 10px;
+                margin-bottom: 20px;
+                height: 215px;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .about p,
+            .about ul {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+        }
+        @media screen and (max-width: 500px) {
+            /* .main-container {
+              max-width: 600px;
+              margin: 0 auto;
+              padding: 20px;
+            } */
+            header h1 {
+                font-size: 35px;
+            }
+            header h2 {
+                font-size: 28px;
+            }
+            .about h3 {
+                font-size: 1.5em;
+            }
+            .technologies h2 {
+                font-size: 1.5em;
+            }
+            .developers h2 {
+                font-size: 1.5em;
+            }
+            .details p {
+                font-size: 17px;
+                margin-bottom: 10px;
+                display: block;
+            }
+            .developer {
+                width: 50%;
+                margin: auto;
+                display: block;
+                margin-top: 10px;
+            }
+        }
+    @media screen and (max-width: 420px) {
+            .about p,
+            .about ul {
+                font-size: 15px;
+            }
+            p {
+                font-size: 15px;
+            }
+            header h1 {
+                font-size: 28px;
+            }
+            header h2 {
+                font-size: 24px;
+            }
+            .about h3 {
+                font-size: 1.2em;
+            }
+            .technologies h2 {
+                font-size: 1.2em;
+            }
+            .developers h2 {
+                font-size: 1.2em;
+            }
+            .details {
+                display: block;
+            }
+        }
+        @media screen and (max-width: 375px) {
+            header h1 {
+                font-size: 24px;
+            }
+            header h2 {
+                font-size: 20px;
+            }
+            .about h3 {
+                font-size: 1.1em;
+            }
+            .technologies h2 {
+                font-size: 1.1em;
+            }
+            .developers h2 {
+                font-size: 1.1em;
+            }
+            .details {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Header Section -->
+        <header>
+            <h1 class="hover">About Project</h1>
+            <!-- <h2>Face Detection and Hand Detection</h1> -->
+        </header>
+        <!-- About Project Section -->
+        <!-- About of Face Detection Part of project -->
+        <section class="about">
+            <h3>Face Detection with Gender and Age Prediction</h3>
+            <p>
+                The <strong>Face Detection</strong> module of this project leverages the power of <strong>Neural
+                    Networks (DNN)</strong> and <strong>OpenCV</strong> to achieve real-time face detection and
+                classification. This feature is designed to accurately identify faces in live camera feeds or uploaded
+                images, followed by predicting the gender and age group of the detected individuals.
+            </p>
+            <p>Key features include:</p>
+            <ul>
+                <li>Face detection with gender and age prediction using DNN with OpenCV.</li>
+                <li>Hand detection with optional hand landmark tracking using Mediapipe.</li>
+            </ul>
+            <p>
+                Developed using <strong>Streamlit</strong>, this project demonstrates cutting-edge technology with an
+                interactive and user-friendly interface.
+            </p>
+        </section>
+        <!-- About of Face Detection Part of project -->
+        <section class="about">
+            <h3>Hand Detection with Landmark Tracking</h3>
+            <p>
+                The <strong>Hand Detection</strong> module in this project is built using the robust
+                <strong>Mediapipe</strong> library, offering real-time detection and tracking of hands in live video
+                streams or images. This feature is further enhanced with an option to enable hand landmark tracking,
+                which precisely maps key points on the hand for detailed analysis.
+            </p>
+            <p>Key features include:</p>
+            <ul>
+                <li><strong>Hand Detection:</strong> Detects one or both hands with high accuracy and minimal latency.
+                </li>
+                <li><strong>Hand Landmark Tracking:</strong> Maps 21 key points on each hand, including fingertips,
+                    joints, and the wrist, enabling advanced applications such as gesture recognition and motion
+                    tracking.</li>
+                <li><strong>Customizable Options:</strong> Includes a toggle to enable or disable landmark tracking,
+                    offering flexibility based on user requirements.</li>
+                <li><strong>Lightweight and Efficient:</strong> Designed for high performance even on devices with
+                    limited computational power.</li>
+            </ul>
+            <p>
+                This module showcases the versatility of AI in analyzing human hands for a wide range of real-world
+                applications.
+            </p>
+        </section>
+        <!-- Teechnologies Used Section -->
+        <section class="technologies">
+            <h2>Technologies Used</h2>
+            <div class="technology-card">
+                <!-- Row 1 -->
+                <div class="row">
+                    <div class="tech-card">
+                        <h4>Python</h4>
+                        <p>
+                            Used as the core programming language for implementing face detection, hand detection, and
+                            gender and age prediction algorithms, leveraging libraries like OpenCV and Mediapipe for
+                            efficient computations.
+                        </p>
+                    </div>
+                    <div class="tech-card">
+                        <h4>HTML</h4>
+                        <p>
+                            Used to structure the web pages, including sections like "About Project," "Technologies
+                            Used," and developer profiles, ensuring a clear and semantic layout.
+                        </p>
+                    </div>
+                    <!-- <div class="tech-card">
+                        <h4>CSS</h4>
+                        <p>
+                            Utilized for styling the web pages, creating visually appealing layouts, adding animations, hover effects, and ensuring responsive design for mobile devices.
+                        </p>
+                    </div> -->
+                </div>
+                <!-- Row 2 -->
+                <div class="row">
+                    <div class="tech-card">
+                        <h4>CSS</h4>
+                        <p>
+                            Utilized for styling the web pages, creating visually appealing layouts, adding animations,
+                            hover effects, and ensuring responsive design for mobile devices.
+                        </p>
+                    </div>
+                    <div class="tech-card">
+                        <h4>JavaScript</h4>
+                        <p>
+                            Implemented interactive features like animations, hover effects, and dynamic updates to
+                            enhance the user experience across the project.
+                        </p>
+                    </div>
+                </div>
+                <!-- Row 3 -->
+                <div class="row">
+                    <div class="tech-card">
+                        <h4>Streamlit</h4>
+                        <p>
+                            Used to develop the web interface for the project, enabling seamless interaction with the
+                            face and hand detection features, along with gender and age prediction.
+                        </p>
+                    </div>
+                    <div class="tech-card">
+                        <h4>OpenCV</h4>
+                        <p>
+                            Used for implementing face detection and gender and age prediction using deep neural
+                            networks, providing efficient and accurate computer vision capabilities.
+                        </p>
+                    </div>
+                </div>
+                <!-- Row 4 -->
+                <div class="row">
+                    <div class="tech-card">
+                        <h4>Mediapipe</h4>
+                        <p>
+                            Utilized for hand landmark detection, providing accurate recognition of hand gestures and
+                            positions.
+                        </p>
+                    </div>
+                    <div class="tech-card">
+                        <h4>NumPy</h4>
+                        <p>
+                            Used for creating frames and performing efficient numerical calculations in image
+                            processing.
+                        </p>
+                    </div>
+                </div><!-- Row 5 -->
+                <div class="row">
+                    <div class="tech-card">
+                        <h4>Pillow</h4>
+                        <p>
+                            Used for uploading images and drawing rectangular boxes around detected objects in the
+                            project, enhancing visualization and annotation capabilities.
+                        </p>
+                    </div>
+                    <div class="tech-card">
+                        <h4>Requests</h4>
+                        <p>
+                            Used to fetch image URLs from the web for processing and analysis, enabling seamless
+                            integration of external images into the application workflow and ensuring efficient data
+                            retrieval for real-time processing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Developers Section -->
+        <section class="developers">
+            <h2>Developers</h2>
+            <div class="developer-card">
+                <div class="details">
+                    <!-- Nishant -->
+                    <div class="developer">
+                        <p class="developer-name"><strong>Nishant Maity</strong></p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/nishant-maity/" target="_blank">
+                                <i class="fa-brands fa-linkedin fa-2xl"></i>
+                            </a>
+                            <a href="https://github.com/Nishant43S" target="_blank">
+                                <i class="fa-brands fa-github fa-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Yash -->
+                    <div class="developer">
+                        <p class="developer-name"><strong>Yash Sahu</strong></p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/yashsahu02" target="_blank">
+                                <i class="fa-brands fa-linkedin fa-2xl"></i>
+                            </a>
+                            <a href="https://github.com/yashsahu02" target="_blank">
+                                <i class="fa-brands fa-github fa-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- FontAwesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
