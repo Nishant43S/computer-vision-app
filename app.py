@@ -32,7 +32,7 @@ app_sidebar = st.sidebar
 with app_sidebar:
     st.link_button(
         label="Project Link",
-        url="#",
+        url="https://github.com/Nishant43S/computer-vision-app.git",
         icon=":material/code_off:",
         use_container_width=True
 
