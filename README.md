@@ -1,1 +1,1 @@
-# computer-vision-app
+# computer vision app
