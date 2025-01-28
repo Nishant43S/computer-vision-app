@@ -112,7 +112,7 @@ with Main_app_section[1]:
                     for i in detected_objects[1::2]:
                         st.warning(f"- {i}")
             else:
-                st.write("No objects detected with the given threshold.")
+                st.info("No objects detected.")
 
 
     elif input_method == "Image URL":
@@ -150,7 +150,7 @@ with Main_app_section[1]:
                     
 
                 else:
-                    st.write("No objects detected with the given threshold.")
+                    st.info("No objects detected.")
 
             except Exception as e:
                 st.error(f"Failed to load image from URL. Error: {e}")
