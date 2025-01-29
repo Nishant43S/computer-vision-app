@@ -51,7 +51,7 @@ python -m streamlit run app.py
 
 ### How It Works
 1. Open the web application in your browser.
-2. Upload an image or enable the live camera feed.
+2. enable the live camera feed.
 3. The model detects faces, predicts gender and age, and optionally tracks hand landmarks.
 4. View real-time results with bounding boxes and annotations.
 
