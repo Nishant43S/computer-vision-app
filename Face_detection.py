@@ -117,7 +117,7 @@ mp_drawing = mp.solutions.drawing_utils
 
 
 ### Function to detect hands and draw landmarks
-def process_frame(frame, show_landmarks):
+def detect_hand_and_display(frame, show_landmarks):
     """
     this function is used to detect hand (Left, Right).
     or show hand land marks on video
@@ -255,7 +255,7 @@ with face_detection_col[1]:
                     break
 
                 ### Process the frame
-                processed_frame = process_frame(frame, toggle_detection_landmark)
+                processed_frame = detect_hand_and_display(frame, toggle_detection_landmark)
 
                 ### Display the frame in Streamlit
                 stframe.image(processed_frame, channels="BGR", use_container_width=False,width=920)
