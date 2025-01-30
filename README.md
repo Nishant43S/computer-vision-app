@@ -77,6 +77,7 @@ python -m streamlit run app.py
 - **Nishant Maity** - Developer
 
 ## License
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 This project is licensed under the MIT License. Feel free to modify and distribute it as per the license terms.
 
 ---
