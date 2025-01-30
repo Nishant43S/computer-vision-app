@@ -59,13 +59,13 @@ python -m streamlit run app.py
 ```
 📂 Face-Detection-Project
  ├── 📄 app.py                 # Main application script
- ├── 📄 Face_detection.py       # Face & Hand Detection script
- ├── 📄 Object_detection.py       # Object Detection script
+ ├── 📄 Face_detection.py      # Face & Hand Detection script
+ ├── 📄 Object_detection.py    # Object Detection script
  ├── 📂 models                 # Pre-trained models for face detection
  ├── 📂 static                 # CSS, JS, and images
  ├── 📂 templates              # HTML templates
- ├── 📄 requirements.txt        # Dependencies
- ├── 📄 README.md               # Project documentation
+ ├── 📄 requirements.txt       # Dependencies
+ ├── 📄 README.md              # Project documentation
 ```
 
 ## Screenshots
