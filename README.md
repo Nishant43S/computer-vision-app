@@ -74,8 +74,8 @@ python -m streamlit run app.py
 
 
 ## Contributors
-- **Nishant Maity** - Developer
-
+- **Yash Sahu**
+- <a href="https://www.linkedin.com/in/yashsahu02/" target="_blank">Linkedin</a> 
 ## License
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
