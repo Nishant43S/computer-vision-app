@@ -17,6 +17,12 @@ This project leverages Deep Neural Networks (DNN) and OpenCV to achieve real-tim
 - Option to enable or disable landmark tracking.
 - Optimized for lightweight and efficient computation.
 
+### Object Detection with DERT
+- AI-Powered Detection: Uses the DERT model for high-precision object recognition.
+- Multiple Upload Options:
+- Drag & Drop - Easily upload images from your device.
+- Image URL - Paste a URL to analyze an online image.
+
 ## Technologies Used
 - **Python** - Core programming language for implementing detection algorithms.
 - **OpenCV** - Used for face detection and gender & age prediction using deep neural networks.
